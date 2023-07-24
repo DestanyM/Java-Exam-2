@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +15,17 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        char[] string = new char[string1.length()];
+        int letterIndex = 0;
+        for(int i = string1.length() -1; i >= 0; i--){
+            string[letterIndex] = string1.charAt(i);
+            letterIndex++;
+        }
+        String reverse = "";
+        for(int i = 0; i < string1.length(); i++){
+            reverse = reverse + string[i];
+        }
+        return reverse;
     }
 
     /**
@@ -25,6 +35,7 @@ public class BasicStringUtils {
      */
     public static String reverseThenConcatenate(String string1, String string2) {
         return null;
+
     }
 
     /**
@@ -33,7 +44,15 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < string.length(); i++) {
+            char currentChar = string.charAt(i);
+            if (charactersToRemove.indexOf(currentChar) == -1) {
+                result.append(currentChar);
+            }
+        }
+
+        return result.toString();
     }
 
     /**
@@ -42,6 +61,16 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for(int i = string.length()-1; i >= 0; i--) {
+            char currentChar = string.charAt(i);
+            if (charactersToRemove.indexOf(currentChar) == -1) {
+                result.append(currentChar);
+            }
+        }
+
+        return result.toString();
     }
+        //return null;
 }
+
