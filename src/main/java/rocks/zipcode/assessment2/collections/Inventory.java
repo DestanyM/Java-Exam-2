@@ -1,6 +1,9 @@
 package rocks.zipcode.assessment2.collections;
 
+import java.util.ArrayDeque;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Use a map to keep track of inventory in a store
@@ -10,6 +13,7 @@ public class Inventory {
      * @param strings list of strings to add / remove / fetch from
      */
     public Inventory(List<String> strings) {
+        Map<String, List<String>> stringListMap = new HashMap<>();
 
     }
 
@@ -24,7 +28,8 @@ public class Inventory {
      * @param item - increment the number of this item in stock by 1
      */
     public void addItemToInventory(String item) {
-        return;
+
+        return ;
     }
 
     /**

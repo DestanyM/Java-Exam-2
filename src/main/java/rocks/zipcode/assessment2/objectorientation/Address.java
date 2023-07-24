@@ -7,6 +7,7 @@ public class Address {
     public Address() {
     }
 
+
     /**
      * @param addressLine1 - first address line
      * @param addressLine2 - second address line
@@ -18,14 +19,14 @@ public class Address {
     }
 
     public String getAddressLine1() {
-        return null;
+        return getAddressLine1();
     }
 
     public void setAddressLine1(String addressLine1) {
     }
 
     public String getAddressLine2() {
-        return null;
+        return getAddressLine2();
     }
 
     public void setAddressLine2(String addressLine2) {
